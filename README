@@ -1,0 +1,47 @@
+README
+======
+
+solution
+=========
+
+Monster game created as per given instructions (Used CPP as primary language for solution)
+This solution can be improved using STL maps.Used vector for simplicity.
+
+Unit test
+=========
+All unit tests are captures using cppunit test framework(http://cppunit.sourceforge.net/doc/cvs/index.html)
+
+Compilation
+===========
+Project can be compiled as make clean; make (This will create both solution binary and test binary)
+Created maven project POM(Object model), I haven't tested this using maven
+
+Used STL container Vector for map and monster storage
+Algorithm find_if used for searching within container
+
+Not Implemented
+==============
+I haven't implemented city removal correctly within processMonster (City routes also need to be removed)
+Not tested with maven
+
+Execution
+==========
+./main <number of monsters>
+
+Unit Test Execution
+===================
+./unit_test
+
+Sample Unit test run
+====================
+sajjanjyothi$ ./unit_test 
+TestMonster::testgetNumber : OK
+TestMonster::testgetCity : OK
+TestCity::testGetMonster1 : OK
+TestCity::testGetMonster2 : OK
+TestCity::testGetName : OK
+TestCity::testGetEast : OK
+TestCity::testGetWest : OK
+TestCity::testGetSouth : OK
+TestCity::testGetNorth : OK
+OK (9)
