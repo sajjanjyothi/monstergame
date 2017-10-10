@@ -19,18 +19,14 @@ Created maven project POM(Object model), I haven't tested this using maven
 Used STL container Vector for map and monster storage
 Algorithm find_if used for searching within container
 
+Execution
+===========
+./main <number of monsters>
+
 Not Implemented
 ==============
 I haven't implemented city removal correctly within processMonster (City routes also need to be removed)
 Not tested with maven
-
-Execution
-==========
-./main <number of monsters>
-
-Unit Test Execution
-===================
-./unit_test
 
 Sample Unit test run
 ====================
@@ -45,3 +41,20 @@ TestCity::testGetWest : OK
 TestCity::testGetSouth : OK
 TestCity::testGetNorth : OK
 OK (9)
+
+
+Sample Run outputs
+==================
+sajjans-MacBook-Air:MIMECAST sajjanjyothi$ ./main 1 | wc -l
+    6763
+sajjans-MacBook-Air:MIMECAST sajjanjyothi$ cat map.txt | wc -l
+    6763
+sajjans-MacBook-Air:MIMECAST sajjanjyothi$ ./main 10 | wc -l
+    6763
+sajjans-MacBook-Air:MIMECAST sajjanjyothi$ ./main 100 | wc -l
+    6724
+sajjans-MacBook-Air:MIMECAST sajjanjyothi$ ./main 500 | wc -l
+    6516
+sajjans-MacBook-Air:MIMECAST sajjanjyothi$ ./main 1000 | wc -l
+    6287
+sajjans-MacBook-Air:MIMECAST sajjanjyothi$ 

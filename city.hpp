@@ -12,22 +12,23 @@ private:
     string south;
     string east;
     string west;
-    Monster monster1;
-    Monster monster2;
+    Monster *monster1;
+    Monster *monster2;
 public:
     City(string name, string east, string west, string south, string north):name(name),
         north(north),
         south(south),
         east(east),
         west(west){
-            
+            monster1 = NULL;
+            monster2 = NULL;
         }
     City(){}
 
-    void setMonster1(Monster monster1);
-    void setMonster2(Monster monster2);
-    int getMonster1();
-    int getMonster2();
+    void setMonster1(Monster *monster1);
+    void setMonster2(Monster *monster2);
+    Monster* getMonster1();
+    Monster* getMonster2();
     string getName();
     string getEast();
     string getWest();

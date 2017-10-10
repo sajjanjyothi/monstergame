@@ -1,21 +1,21 @@
 #include "city.hpp"
 #include <iostream>
-void City::setMonster1(Monster monster1)
+void City::setMonster1(Monster *monster1)
 {
     this->monster1 = monster1;
 }
-void City::setMonster2(Monster monster2)
+void City::setMonster2(Monster *monster2)
 {
     this->monster2 = monster2;
 }
-int City::getMonster1()
+Monster* City::getMonster1()
 {
-    return monster1.getNumber();
+    return monster1;
 }
 
-int City::getMonster2()
+Monster* City::getMonster2()
 {
-    return monster2.getNumber();
+    return monster2;
 }
 
 string City::getName()

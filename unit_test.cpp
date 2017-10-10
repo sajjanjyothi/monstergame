@@ -92,12 +92,16 @@ class TestCity : public CppUnit::TestFixture
 
 void TestCity::testGetMonster1(void)
 {
-    CPPUNIT_ASSERT(5 == cityObj->getMonster1());
+    Monster *obj;
+    obj = cityObj->getMonster1();
+    CPPUNIT_ASSERT(5 == obj->getNumber());
 }
 
 void TestCity::testGetMonster2(void)
 {
-    CPPUNIT_ASSERT(6 == cityObj->getMonster2());
+    Monster *obj;
+    obj = cityObj->getMonster2();
+    CPPUNIT_ASSERT(6 == obj->getNumber());
 }
 
 void TestCity::testGetName(void)
@@ -128,8 +132,8 @@ void TestCity::testGetNorth(void)
 void TestCity::setUp(void)
 {
     cityObj = new City("London", "x", "y", "a", "b");
-    Monster mobj1(5, "London");
-    Monster mobj2(6, "Leeds");
+    Monster *mobj1 = new Monster(5, "London");
+    Monster *mobj2 = new Monster(6, "Leeds");
     cityObj->setMonster1(mobj1);
     cityObj->setMonster2(mobj2);
 }
